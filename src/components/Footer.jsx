@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/BRGOKA"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-ember-500 dark:text-zinc-400"
@@ -22,7 +22,7 @@ export default function Footer() {
             <Github size={16} /> GitHub
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/brahim-goudjal-5ab9183b8/"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-ember-500 dark:text-zinc-400"
@@ -30,7 +30,7 @@ export default function Footer() {
             <Linkedin size={16} /> LinkedIn
           </a>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:brahim.goudjal1@gmail.com"
             className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-ember-500 dark:text-zinc-400"
           >
             <Mail size={16} /> Email

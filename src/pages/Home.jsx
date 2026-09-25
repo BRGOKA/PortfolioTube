@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { Github, Linkedin, ArrowRight } from "lucide-react";
+import { Github, Linkedin, ArrowRight, Mail } from "lucide-react";
 import ProjectGrid from "../components/ProjectGrid.jsx";
 import Footer from "../components/Footer.jsx";
 import {
@@ -28,7 +28,7 @@ export default function Home({ search }) {
     return projects.filter(
       (p) =>
         (category === "All" || p.category === category) &&
-        matchesSearch(p, search)
+        matchesSearch(p, search),
     );
   }, [category, search]);
 
@@ -56,7 +56,7 @@ export default function Home({ search }) {
           </p>
           <div className="mt-3 flex gap-2">
             <a
-              href="https://github.com"
+              href="https://github.com/BRGOKA"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-1.5 rounded-full bg-zinc-900 px-3.5 py-1.5 text-xs font-medium text-white hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
@@ -64,12 +64,20 @@ export default function Home({ search }) {
               <Github size={14} /> GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/brahim-goudjal-5ab9183b8/"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-1.5 rounded-full border border-zinc-300 px-3.5 py-1.5 text-xs font-medium text-zinc-700 hover:border-zinc-400 dark:border-zinc-700 dark:text-zinc-300"
             >
               <Linkedin size={14} /> LinkedIn
+            </a>
+            <a
+              href="mailto:brahim.goudjal1@://gmail.com"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 rounded-full border border-zinc-300 px-3.5 py-1.5 text-xs font-medium text-zinc-700 hover:border-zinc-400 dark:border-zinc-700 dark:text-zinc-300"
+            >
+              <Mail size={14} />
+              brahim.goudjal1@gmail.com
             </a>
           </div>
         </div>
@@ -140,9 +148,9 @@ export default function Home({ search }) {
               About this channel
             </h2>
             <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-              I'm a biomedical engineering student building at the
-              intersection of software, AI, and healthcare. Every project
-              here is something I actually built, not a tutorial follow-along.
+              I'm a biomedical engineering student building at the intersection
+              of software, AI, and healthcare. Every project here is something I
+              actually built, not a tutorial follow-along.
             </p>
             <Link
               to="/about"

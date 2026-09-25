@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { Search, Sun, Moon, Github, Linkedin, Menu, PlaySquare } from "lucide-react";
+import {
+  Search,
+  Sun,
+  Moon,
+  Github,
+  Linkedin,
+  Menu,
+  PlaySquare,
+} from "lucide-react";
 import { useTheme } from "../context/ThemeContext.jsx";
 
 export default function Header({ search, onSearchChange, onMenuClick }) {
@@ -45,7 +53,7 @@ export default function Header({ search, onSearchChange, onMenuClick }) {
 
       <div className="ml-auto flex items-center gap-1 sm:gap-2">
         <a
-          href="https://github.com"
+          href="https://github.com/BRGOKA"
           target="_blank"
           rel="noreferrer"
           aria-label="GitHub profile"
@@ -54,7 +62,7 @@ export default function Header({ search, onSearchChange, onMenuClick }) {
           <Github size={18} />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/brahim-goudjal-5ab9183b8/"
           target="_blank"
           rel="noreferrer"
           aria-label="LinkedIn profile"
