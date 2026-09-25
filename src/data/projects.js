@@ -1,0 +1,189 @@
+// Central project data. Add a new project by adding an object here —
+// no UI code needs to change.
+export const categories = [
+  "All",
+  "AI / ML",
+  "Medical AI",
+  "Computer Vision",
+  "Web Development",
+  "Full Stack",
+  "Cybersecurity",
+  "Automation",
+  "Other",
+];
+
+export const projects = [
+  {
+    id: "medical-ai-platform",
+    title: "Medical AI Imaging Platform",
+    description:
+      "A platform that analyzes medical scans and flags regions of interest for radiologists, built to cut review time without replacing clinical judgment.",
+    thumbnail: "",
+    thumbnailGradient: "from-rose-500 via-red-600 to-zinc-900",
+    technologies: ["Python", "TensorFlow", "React", "FastAPI"],
+    category: "Medical AI",
+    year: 2026,
+    duration: "03:42",
+    featured: true,
+    github: "#",
+    demo: "#",
+    problem:
+      "Radiologists reviewing high volumes of scans face fatigue, and subtle anomalies are easy to miss in dense imaging studies.",
+    solution:
+      "A convolutional model trained on labeled scan data highlights likely regions of interest, presented alongside the original image for a human to confirm.",
+    technical:
+      "A TensorFlow model serves predictions through a FastAPI backend; the React frontend overlays heatmaps on the DICOM-derived images and lets a clinician accept, reject, or annotate each finding.",
+    learned:
+      "Working with medical imaging data taught me how much of the engineering effort goes into preprocessing, calibration, and building a UI that clinicians can actually trust.",
+  },
+  {
+    id: "brain-mri-classifier",
+    title: "Brain MRI Tumor Classifier",
+    description:
+      "A classifier that distinguishes tumor types from brain MRI slices, with a focus on interpretability.",
+    thumbnail: "",
+    thumbnailGradient: "from-violet-500 via-fuchsia-600 to-zinc-900",
+    technologies: ["Python", "PyTorch", "OpenCV"],
+    category: "Medical AI",
+    year: 2025,
+    duration: "02:18",
+    featured: true,
+    github: "#",
+    demo: "#",
+    problem:
+      "Distinguishing tumor subtypes from MRI slices by eye takes years of training, and second opinions are not always available quickly.",
+    solution:
+      "A PyTorch classifier trained on a public MRI dataset predicts tumor subtype and generates a Grad-CAM overlay so the prediction is explainable rather than a black box.",
+    technical:
+      "OpenCV handles slice preprocessing and normalization; a ResNet-based backbone was fine-tuned for the classification task, with Grad-CAM used to visualize which regions drove each prediction.",
+    learned:
+      "This project pushed me to prioritize interpretability over raw accuracy — a model that can't explain itself is much less useful in a medical context.",
+  },
+  {
+    id: "skin-disease-classifier",
+    title: "Skin Disease Classifier",
+    description:
+      "An image classifier for common dermatological conditions, built as a learning exercise in transfer learning.",
+    thumbnail: "",
+    thumbnailGradient: "from-amber-500 via-orange-600 to-zinc-900",
+    technologies: ["Python", "TensorFlow", "Keras"],
+    category: "Computer Vision",
+    year: 2025,
+    duration: "01:54",
+    featured: false,
+    github: "#",
+    demo: "#",
+    problem:
+      "Recognizing skin conditions from photos requires broad visual experience that's hard to gain without clinical exposure.",
+    solution:
+      "A transfer-learning approach fine-tunes a pretrained convolutional network on a labeled dermatology image set.",
+    technical:
+      "Built with Keras on top of TensorFlow, using a pretrained EfficientNet backbone, data augmentation to handle class imbalance, and a simple Flask endpoint for inference.",
+    learned:
+      "I learned how far transfer learning stretches a small dataset, and how much class imbalance can distort a model's real-world performance.",
+  },
+  {
+    id: "rag-lab-notebook",
+    title: "RAG Lab Notebook Assistant",
+    description:
+      "A retrieval-augmented assistant that answers questions from a personal collection of research notes and papers.",
+    thumbnail: "",
+    thumbnailGradient: "from-sky-500 via-blue-600 to-zinc-900",
+    technologies: ["Python", "Hugging Face", "React"],
+    category: "AI / ML",
+    year: 2026,
+    duration: "04:05",
+    featured: true,
+    github: "#",
+    demo: "#",
+    problem:
+      "Research notes and PDFs pile up faster than anyone can search through manually, especially during literature reviews.",
+    solution:
+      "A retrieval-augmented generation pipeline indexes notes and papers locally, then answers natural-language questions with citations back to the source document.",
+    technical:
+      "Documents are chunked and embedded locally, stored in a vector index, and retrieved at query time to ground a language model's answer; the React frontend renders inline citations.",
+    learned:
+      "Building this taught me how much retrieval quality — not model size — determines whether a RAG system actually feels reliable.",
+  },
+  {
+    id: "campus-security-scanner",
+    title: "Campus Network Vulnerability Scanner",
+    description:
+      "A lightweight scanner built to practice identifying common misconfigurations on a lab network.",
+    thumbnail: "",
+    thumbnailGradient: "from-emerald-500 via-teal-600 to-zinc-900",
+    technologies: ["Python", "Linux", "Docker"],
+    category: "Cybersecurity",
+    year: 2025,
+    duration: "02:37",
+    featured: false,
+    github: "#",
+    demo: "#",
+    problem:
+      "Small lab networks accumulate default credentials, open ports, and outdated services that are easy to overlook.",
+    solution:
+      "A scanning tool that walks a defined IP range, checks for common misconfigurations, and produces a plain-language report.",
+    technical:
+      "Written in Python, containerized with Docker for repeatable runs, using socket-level scanning and a set of signature checks against known default configurations.",
+    learned:
+      "Working on offensive tooling — even in a lab — changed how I write defensive code in everything else I build.",
+  },
+  {
+    id: "clinic-scheduling-app",
+    title: "Clinic Scheduling Web App",
+    description:
+      "A full-stack scheduling tool for a small clinic, handling bookings, reminders, and staff calendars.",
+    thumbnail: "",
+    thumbnailGradient: "from-red-500 via-rose-600 to-zinc-900",
+    technologies: ["React", "ASP.NET Core", "PostgreSQL"],
+    category: "Full Stack",
+    year: 2026,
+    duration: "05:12",
+    featured: true,
+    github: "#",
+    demo: "#",
+    problem:
+      "A small clinic was managing appointments through a shared spreadsheet, which caused double-bookings and missed reminders.",
+    solution:
+      "A scheduling application with role-based views for staff and patients, automated reminder emails, and a calendar that prevents conflicting bookings.",
+    technical:
+      "An ASP.NET Core API backs a PostgreSQL database, with a React frontend for both the patient-facing booking flow and the internal staff calendar.",
+    learned:
+      "This was my first project where the hardest problems were about people and process, not code — the scheduling logic had to match how the clinic actually worked.",
+  },
+  {
+    id: "automation-report-bot",
+    title: "Automated Lab Report Generator",
+    description:
+      "A script-driven tool that turns raw experiment data into formatted lab reports automatically.",
+    thumbnail: "",
+    thumbnailGradient: "from-lime-500 via-green-600 to-zinc-900",
+    technologies: ["Python", "SQL"],
+    category: "Automation",
+    year: 2024,
+    duration: "01:20",
+    featured: false,
+    github: "#",
+    demo: "#",
+    problem:
+      "Writing up lab reports by hand from raw instrument output was repetitive and error-prone.",
+    solution:
+      "A script that pulls experiment data from a database, applies the lab's formatting standards, and outputs a ready-to-review report.",
+    technical:
+      "Data is queried from a SQL database, processed with Python, and rendered into a templated report document with charts generated automatically from the results.",
+    learned:
+      "A small amount of automation removed a recurring source of tedious errors — this project made me appreciate boring, reliable tooling.",
+  },
+];
+
+export function getProjectById(id) {
+  return projects.find((p) => p.id === id);
+}
+
+export function getFeaturedProjects() {
+  return projects.filter((p) => p.featured);
+}
+
+export function getLatestProjects(count = 4) {
+  return [...projects].sort((a, b) => b.year - a.year).slice(0, count);
+}
