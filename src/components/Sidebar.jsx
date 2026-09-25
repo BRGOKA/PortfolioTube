@@ -1,5 +1,13 @@
 import { NavLink } from "react-router-dom";
-import { Home, Code2, UserRound, History, ListTodo, X } from "lucide-react";
+import {
+  Home,
+  Code2,
+  UserRound,
+  History,
+  ListTodo,
+  X,
+  Gamepad,
+} from "lucide-react";
 
 const navItems = [
   { to: "/", label: "Home", icon: Home, end: true },
@@ -7,6 +15,7 @@ const navItems = [
   { to: "/about", label: "About", icon: UserRound },
   { to: "/history", label: "History", icon: History },
   { to: "/build-later", label: "Build Later", icon: ListTodo },
+  { to: "/hobies", label: "Hobies", icon: Gamepad },
 ];
 
 function NavItems({ onNavigate }) {

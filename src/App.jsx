@@ -10,6 +10,7 @@ import History from "./pages/History.jsx";
 import BuildLater from "./pages/BuildLater.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import ScrollToTop from "./utlis/ScrollToTop.jsx";
+import Hobies from "./pages/Hobies.jsx";
 
 export default function App() {
   const [search, setSearch] = useState("");
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/history" element={<History />} />
             <Route path="/build-later" element={<BuildLater />} />
             <Route path="/projects/:id" element={<ProjectPage />} />
+            <Route path="/hobies" element={<Hobies />} />
           </Routes>
         </main>
       </div>
