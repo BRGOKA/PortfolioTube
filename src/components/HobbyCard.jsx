@@ -11,7 +11,9 @@ export default function HobbyCard({ hobby }) {
       <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
         {hobby.title}
       </h3>
+
       <p className="mt-1 text-sm font-medium text-ember-500">{hobby.tagline}</p>
+
       <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
         {hobby.description}
       </p>
