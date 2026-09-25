@@ -9,6 +9,7 @@ import About from "./pages/About.jsx";
 import History from "./pages/History.jsx";
 import BuildLater from "./pages/BuildLater.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
+import ScrollToTop from "./utlis/ScrollToTop.jsx";
 
 export default function App() {
   const [search, setSearch] = useState("");
@@ -27,6 +28,7 @@ export default function App() {
           onClose={() => setMobileNavOpen(false)}
         />
         <main className="min-w-0 flex-1">
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home search={search} />} />
             <Route path="/languages" element={<Languages />} />

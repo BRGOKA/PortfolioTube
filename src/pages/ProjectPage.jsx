@@ -22,10 +22,6 @@ export default function ProjectPage() {
   const { id } = useParams();
   const project = getProjectById(id);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [id]);
-
   if (!project) return <Navigate to="/" replace />;
 
   return (
