@@ -25,7 +25,7 @@ export default function Header({ search, onSearchChange, onMenuClick }) {
       </button>
 
       <Link
-        to="/"
+        to="/portfoliotube"
         className="flex shrink-0 items-center gap-2 rounded-md px-1 py-1 text-zinc-900 dark:text-white"
       >
         <PlaySquare className="text-ember-500" size={24} strokeWidth={2.2} />

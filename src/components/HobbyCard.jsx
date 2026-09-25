@@ -45,7 +45,7 @@ export default function HobbyCard({ hobby }) {
             {linkedProjects.map((p) => (
               <Link
                 key={p.id}
-                to={`/projects/${p.id}`}
+                to={`/portfoliotube/projects/${p.id}`}
                 className="rounded-full border border-zinc-200 px-2.5 py-1 text-xs text-zinc-600 hover:border-ember-500 hover:text-ember-500 dark:border-zinc-700 dark:text-zinc-400"
               >
                 {p.title}

@@ -153,7 +153,7 @@ export default function Home({ search }) {
               actually built, not a tutorial follow-along.
             </p>
             <Link
-              to="/about"
+              to="/portfoliotube/about"
               className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-ember-500 hover:underline"
             >
               Read more about me <ArrowRight size={14} />

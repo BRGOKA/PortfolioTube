@@ -27,7 +27,7 @@ export default function ProjectPage() {
   return (
     <PageContainer>
       <Link
-        to="/"
+        to="/portfoliotube"
         className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-ember-500 dark:text-zinc-400"
       >
         <ArrowLeft size={16} /> Back to projects

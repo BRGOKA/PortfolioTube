@@ -14,7 +14,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <Link
-      to={`/projects/${id}`}
+      to={`/portfoliotube/projects/${id}`}
       className="group hover:scale-105 transition ease-in-out block rounded-lg focus-visible:outline-none"
       aria-label={`View project: ${title}`}
     >

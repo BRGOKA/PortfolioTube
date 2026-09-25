@@ -10,12 +10,12 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { to: "/", label: "Home", icon: Home, end: true },
-  { to: "/languages", label: "Languages", icon: Code2 },
-  { to: "/about", label: "About", icon: UserRound },
-  { to: "/history", label: "History", icon: History },
-  { to: "/build-later", label: "Build Later", icon: ListTodo },
-  { to: "/hobies", label: "Hobies", icon: Gamepad },
+  { to: "/portfoliotube", label: "Home", icon: Home, end: true },
+  { to: "/portfoliotube/languages", label: "Languages", icon: Code2 },
+  { to: "/portfoliotube/about", label: "About", icon: UserRound },
+  { to: "/portfoliotube/history", label: "History", icon: History },
+  { to: "/portfoliotube/build-later", label: "Build Later", icon: ListTodo },
+  { to: "/portfoliotube/hobies", label: "Hobies", icon: Gamepad },
 ];
 
 function NavItems({ onNavigate }) {
