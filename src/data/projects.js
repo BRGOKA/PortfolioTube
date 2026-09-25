@@ -22,7 +22,7 @@ export const projects = [
     thumbnailGradient: "from-rose-500 via-red-600 to-zinc-900",
     technologies: ["Python", "TensorFlow", "React", "FastAPI"],
     category: "Medical AI",
-    year: 2026,
+    year: 2025,
     duration: "03:42",
     featured: true,
     github: "#",
@@ -53,11 +53,11 @@ export const projects = [
     problem:
       "Distinguishing tumor subtypes from MRI slices by eye takes years of training, and second opinions are not always available quickly.",
     solution:
-      "A PyTorch classifier trained on a public MRI dataset predicts tumor subtype and generates a Grad-CAM overlay so the prediction is explainable rather than a black box.",
+      "A PyTorch classifier trained on a public MRI dataset predicts tumor subtype.",
     technical:
-      "OpenCV handles slice preprocessing and normalization; a ResNet-based backbone was fine-tuned for the classification task, with Grad-CAM used to visualize which regions drove each prediction.",
+      "OpenCV handles slice preprocessing and normalization; a ResNet-based backbone was fine-tuned for the classification task.",
     learned:
-      "This project pushed me to prioritize interpretability over raw accuracy — a model that can't explain itself is much less useful in a medical context.",
+      "This project pushed me to prioritize interpretability over raw accuracy a model that can't explain itself is much less useful in a medical context.",
   },
   {
     id: "skin-disease-classifier",
@@ -82,37 +82,37 @@ export const projects = [
     learned:
       "I learned how far transfer learning stretches a small dataset, and how much class imbalance can distort a model's real-world performance.",
   },
+  // {
+  //   id: "rag-lab-notebook",
+  //   title: "RAG Lab Notebook Assistant",
+  //   description:
+  //     "A retrieval-augmented assistant that answers questions from a personal collection of research notes and papers.",
+  //   thumbnail: "",
+  //   thumbnailGradient: "from-sky-500 via-blue-600 to-zinc-900",
+  //   technologies: ["Python", "Hugging Face", "React"],
+  //   category: "AI / ML",
+  //   year: 2026,
+  //   duration: "04:05",
+  //   featured: true,
+  //   github: "#",
+  //   demo: "#",
+  //   problem:
+  //     "Research notes and PDFs pile up faster than anyone can search through manually, especially during literature reviews.",
+  //   solution:
+  //     "A retrieval-augmented generation pipeline indexes notes and papers locally, then answers natural-language questions with citations back to the source document.",
+  //   technical:
+  //     "Documents are chunked and embedded locally, stored in a vector index, and retrieved at query time to ground a language model's answer; the React frontend renders inline citations.",
+  //   learned:
+  //     "Building this taught me how much retrieval quality not model size determines whether a RAG system actually feels reliable.",
+  // },
   {
-    id: "rag-lab-notebook",
-    title: "RAG Lab Notebook Assistant",
+    id: "Python-Backdoor",
+    title: "Python Backdoor script",
     description:
-      "A retrieval-augmented assistant that answers questions from a personal collection of research notes and papers.",
-    thumbnail: "",
-    thumbnailGradient: "from-sky-500 via-blue-600 to-zinc-900",
-    technologies: ["Python", "Hugging Face", "React"],
-    category: "AI / ML",
-    year: 2026,
-    duration: "04:05",
-    featured: true,
-    github: "#",
-    demo: "#",
-    problem:
-      "Research notes and PDFs pile up faster than anyone can search through manually, especially during literature reviews.",
-    solution:
-      "A retrieval-augmented generation pipeline indexes notes and papers locally, then answers natural-language questions with citations back to the source document.",
-    technical:
-      "Documents are chunked and embedded locally, stored in a vector index, and retrieved at query time to ground a language model's answer; the React frontend renders inline citations.",
-    learned:
-      "Building this taught me how much retrieval quality — not model size — determines whether a RAG system actually feels reliable.",
-  },
-  {
-    id: "campus-security-scanner",
-    title: "Campus Network Vulnerability Scanner",
-    description:
-      "A lightweight scanner built to practice identifying common misconfigurations on a lab network.",
+      "A lightweight python script to gain a persistent root shell to a compremized computer.",
     thumbnail: "",
     thumbnailGradient: "from-emerald-500 via-teal-600 to-zinc-900",
-    technologies: ["Python", "Linux", "Docker"],
+    technologies: ["Python", "Linux"],
     category: "Cybersecurity",
     year: 2025,
     duration: "02:37",
@@ -120,14 +120,37 @@ export const projects = [
     github: "#",
     demo: "#",
     problem:
-      "Small lab networks accumulate default credentials, open ports, and outdated services that are easy to overlook.",
+      "common scripts are easily detetcted by antiviruses, i wanted to build my own backdoor script.",
     solution:
-      "A scanning tool that walks a defined IP range, checks for common misconfigurations, and produces a plain-language report.",
+      "i build my own python script with persistent execution and root shell access.",
     technical:
-      "Written in Python, containerized with Docker for repeatable runs, using socket-level scanning and a set of signature checks against known default configurations.",
+      "Written in Python, for repeatable runs, using reverse shell technices to gain root access to compremized devices.",
     learned:
-      "Working on offensive tooling — even in a lab — changed how I write defensive code in everything else I build.",
+      "this was a hobby project learned how to bypass antiviruses but still nt perfect.",
   },
+  // {
+  //   id: "campus-security-scanner",
+  //   title: "Campus Network Vulnerability Scanner",
+  //   description:
+  //     "A lightweight scanner built to practice identifying common misconfigurations on a lab network.",
+  //   thumbnail: "",
+  //   thumbnailGradient: "from-emerald-500 via-teal-600 to-zinc-900",
+  //   technologies: ["Python", "Linux", "Docker"],
+  //   category: "Cybersecurity",
+  //   year: 2025,
+  //   duration: "02:37",
+  //   featured: false,
+  //   github: "#",
+  //   demo: "#",
+  //   problem:
+  //     "Small lab networks accumulate default credentials, open ports, and outdated services that are easy to overlook.",
+  //   solution:
+  //     "A scanning tool that walks a defined IP range, checks for common misconfigurations, and produces a plain-language report.",
+  //   technical:
+  //     "Written in Python, containerized with Docker for repeatable runs, using socket-level scanning and a set of signature checks against known default configurations.",
+  //   learned:
+  //     "Working on offensive tooling even in a lab changed how I write defensive code in everything else I build.",
+  // },
   {
     id: "clinic-scheduling-app",
     title: "Clinic Scheduling Web App",
@@ -149,7 +172,7 @@ export const projects = [
     technical:
       "An ASP.NET Core API backs a PostgreSQL database, with a React frontend for both the patient-facing booking flow and the internal staff calendar.",
     learned:
-      "This was my first project where the hardest problems were about people and process, not code — the scheduling logic had to match how the clinic actually worked.",
+      "This was my first project where the hardest problems were about people and process, not code the scheduling logic had to match how the clinic actually worked.",
   },
   {
     id: "automation-report-bot",
@@ -172,7 +195,7 @@ export const projects = [
     technical:
       "Data is queried from a SQL database, processed with Python, and rendered into a templated report document with charts generated automatically from the results.",
     learned:
-      "A small amount of automation removed a recurring source of tedious errors — this project made me appreciate boring, reliable tooling.",
+      "A small amount of automation removed a recurring source of tedious errors this project made me appreciate boring, reliable tooling.",
   },
 ];
 

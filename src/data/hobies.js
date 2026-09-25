@@ -1,12 +1,12 @@
 // Hobbies content for the Hobbies page. Add a new hobby by adding an
-// object here — no UI code needs to change.
+// object here  no UI code needs to change.
 export const hobbies = [
   {
     id: "3d",
     title: "3D",
     tagline: "Modeling, sculpting, and rendering for fun and for projects.",
     description:
-      "I build 3D models and scenes outside of work — sometimes to visualize a project idea, sometimes just to get better at spatial thinking.",
+      "I build 3D models and scenes outside of work  sometimes to visualize a project idea, sometimes just to get better at spatial thinking.",
     tools: ["Blender"],
     relatedProjects: [],
   },
@@ -22,7 +22,8 @@ export const hobbies = [
   {
     id: "bugbounty",
     title: "Bug Bounty",
-    tagline: "Practicing web security by hunting for real vulnerabilities.",
+    tagline:
+      "Practicing web security by hunting for real vulnerabilities sometimes on real servers and sometimes on controlled labs.",
     description:
       "I dig into web apps and lab environments to find and responsibly report security issues, it keeps my security instincts sharp and feeds directly back into how I write code.",
     tools: ["Burp Suite", "OWASP ZAP", "KaliLinux"],
