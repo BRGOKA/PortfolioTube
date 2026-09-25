@@ -3,7 +3,12 @@ export const programmingLanguages = [
     name: "Python",
     description:
       "My primary language for AI, machine learning, data processing, automation, and backend experiments.",
-    usedIn: ["Medical AI", "Computer Vision", "Machine Learning", "RAG Systems"],
+    usedIn: [
+      "Medical AI",
+      "Computer Vision",
+      "Machine Learning",
+      "RAG Systems",
+    ],
   },
   {
     name: "JavaScript",
@@ -17,12 +22,12 @@ export const programmingLanguages = [
       "Used for backend services and APIs, particularly with ASP.NET Core in full-stack projects.",
     usedIn: ["Clinic Scheduling App", "Backend APIs"],
   },
-  {
-    name: "C / C++",
-    description:
-      "Where I go for lower-level work, performance-sensitive code, and coursework that requires close control of memory.",
-    usedIn: ["Coursework", "Performance-critical modules"],
-  },
+  // {
+  //   name: "C / C++",
+  //   description:
+  //     "Where I go for lower-level work, performance-sensitive code, and coursework that requires close control of memory.",
+  //   usedIn: ["Coursework", "Performance-critical modules"],
+  // },
   {
     name: "SQL",
     description:

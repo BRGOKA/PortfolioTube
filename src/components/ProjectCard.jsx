@@ -15,7 +15,7 @@ export default function ProjectCard({ project }) {
   return (
     <Link
       to={`/projects/${id}`}
-      className="group block rounded-lg focus-visible:outline-none"
+      className="group hover:scale-105 transition ease-in-out block rounded-lg focus-visible:outline-none"
       aria-label={`View project: ${title}`}
     >
       <div className="relative aspect-video overflow-hidden rounded-xl bg-zinc-200 shadow-card transition-shadow duration-200 group-hover:shadow-cardHover dark:bg-zinc-800">
