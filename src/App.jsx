@@ -31,13 +31,16 @@ export default function App() {
         <main className="min-w-0 flex-1">
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Home search={search} />} />
-            <Route path="/languages" element={<Languages />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/history" element={<History />} />
-            <Route path="/build-later" element={<BuildLater />} />
-            <Route path="/projects/:id" element={<ProjectPage />} />
-            <Route path="/hobies" element={<Hobies />} />
+            <Route path="/PortfolioTube" element={<Home search={search} />} />
+            <Route path="PortfolioTube/languages" element={<Languages />} />
+            <Route path="PortfolioTube/about" element={<About />} />
+            <Route path="PortfolioTube/history" element={<History />} />
+            <Route path="PortfolioTube/build-later" element={<BuildLater />} />
+            <Route
+              path="PortfolioTube/projects/:id"
+              element={<ProjectPage />}
+            />
+            <Route path="PortfolioTube/hobies" element={<Hobies />} />
           </Routes>
         </main>
       </div>
