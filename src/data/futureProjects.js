@@ -30,7 +30,7 @@ export const futureProjects = [
   {
     id: "local-llm-lab-tools",
     title: "Local LLM Lab Tooling",
-    status: "In Progress",
+    status: "Idea",
     description:
       "A set of tools for running and evaluating open-weight models locally for biomedical text tasks, without sending data off-device.",
     technologies: ["Local AI", "Python", "Privacy"],
@@ -62,5 +62,14 @@ export const futureProjects = [
       "An iteration on this site with a real projects API and content that updates without a redeploy.",
     technologies: ["React", "REST APIs"],
     expectedYear: 2026,
+  },
+  {
+    id: "campus-security-scanner",
+    title: "Campus Network Vulnerability Scanner",
+    status: "Researching",
+    description:
+      "A lightweight scanner built to practice identifying common misconfigurations on a lab network.",
+    technologies: ["Python", "Linux", "Docker"],
+    expectedYear: 2027,
   },
 ];

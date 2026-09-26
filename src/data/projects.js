@@ -127,29 +127,6 @@ export const projects = [
     learned:
       "this was a hobby project learned how to bypass antiviruses but still nt perfect.",
   },
-  // {
-  //   id: "campus-security-scanner",
-  //   title: "Campus Network Vulnerability Scanner",
-  //   description:
-  //     "A lightweight scanner built to practice identifying common misconfigurations on a lab network.",
-  //   thumbnail: "",
-  //   thumbnailGradient: "from-emerald-500 via-teal-600 to-zinc-900",
-  //   technologies: ["Python", "Linux", "Docker"],
-  //   category: "Cybersecurity",
-  //   year: 2025,
-  //   duration: "02:37",
-  //   featured: false,
-  //   github: "#",
-  //   demo: "#",
-  //   problem:
-  //     "Small lab networks accumulate default credentials, open ports, and outdated services that are easy to overlook.",
-  //   solution:
-  //     "A scanning tool that walks a defined IP range, checks for common misconfigurations, and produces a plain-language report.",
-  //   technical:
-  //     "Written in Python, containerized with Docker for repeatable runs, using socket-level scanning and a set of signature checks against known default configurations.",
-  //   learned:
-  //     "Working on offensive tooling even in a lab changed how I write defensive code in everything else I build.",
-  // },
   {
     id: "clinic-scheduling-app",
     title: "Clinic Scheduling Web App",
@@ -167,7 +144,7 @@ export const projects = [
     problem:
       "A small clinic was managing appointments through a shared spreadsheet, which caused double-bookings and missed reminders.",
     solution:
-      "A scheduling application with role-based views for staff and patients, automated reminder emails, and a calendar that prevents conflicting bookings.",
+      "A scheduling application with role-based views for staff and patients, automated reminders, and a calendar that prevents conflicting bookings.",
     technical:
       "An ASP.NET Core API backs a PostgreSQL database, with a React frontend for both the patient-facing booking flow and the internal staff calendar.",
     learned:
