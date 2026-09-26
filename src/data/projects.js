@@ -213,6 +213,28 @@ export const projects = [
     technical: "Vanilla JS game, and just go gambling.",
     learned: "Stastics i guess.",
   },
+  {
+    id: "blog",
+    title: "Atomic Blog",
+    description:
+      "a blog i made with mock data to learn react memoization and optimization technics.",
+    thumbnail: "",
+    thumbnailGradient:
+      "bg-gradient-to-br from-fuchsia-600 via-fuchsia-600 to-zinc-900",
+    technologies: ["React"],
+    category: "Web Development",
+    year: 2024,
+    duration: "01:00",
+    featured: false,
+    github: "https://github.com/BRGOKA/Atomic-Blog",
+    demo: "https://brgoka.github.io/Atomic-Blog/",
+    problem: "wanted to learn optimization technices with react.",
+    solution:
+      "whats better than loading +10k components when clicking a button to learn how to optimize?",
+    technical:
+      "user ract usememo to optimize the blog so when the user reclickes the button that loades the components it wont lag as the first click.",
+    learned: "optimization.",
+  },
 ];
 
 export function getProjectById(id) {
