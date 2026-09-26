@@ -235,6 +235,25 @@ export const projects = [
       "user ract usememo to optimize the blog so when the user reclickes the button that loades the components it wont lag as the first click.",
     learned: "optimization.",
   },
+  {
+    id: "number-game",
+    title: "Number Guessing game",
+    description: "a fun game i made with vanilla JS.",
+    thumbnail: "",
+    thumbnailGradient:
+      "bg-gradient-to-br from-cyan-700 via-blue-700 to-zinc-900",
+    technologies: ["JS"],
+    category: "Web Development",
+    year: 2023,
+    duration: "00:30",
+    featured: false,
+    github: "https://github.com/BRGOKA/Guess-the-number",
+    demo: "https://brgoka.github.io/Guess-the-number/",
+    problem: "i was challenged to make a game in under an hour.",
+    solution: "so i build a number guessing game.",
+    technical: "Vanilla JS game uses Math.random().",
+    learned: "JS.",
+  },
 ];
 
 export function getProjectById(id) {
