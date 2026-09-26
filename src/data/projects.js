@@ -276,6 +276,25 @@ export const projects = [
     learned:
       "How to work with Leaflet, LocalStorage, and how to host on netlify",
   },
+  {
+    id: "quiz",
+    title: "React Quiz",
+    description: "a react web app to test your knowledge about React.",
+    thumbnail: "",
+    thumbnailGradient:
+      "bg-gradient-to-br from-lime-400 via-lime-800 to-zinc-900",
+    technologies: ["React"],
+    category: "Web Development",
+    year: 2024,
+    duration: "01:50",
+    featured: false,
+    github: "https://github.com/BRGOKA/react-quiz",
+    demo: "https://brgoka.github.io/react-quiz/",
+    problem: "wanted to test my knowledge on react.",
+    solution: "built a web app to test it :D.",
+    technical: "React web app.",
+    learned: "How to work with timers.",
+  },
 ];
 
 export function getProjectById(id) {
