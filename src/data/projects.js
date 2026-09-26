@@ -254,6 +254,28 @@ export const projects = [
     technical: "Vanilla JS game uses Math.random().",
     learned: "JS.",
   },
+  {
+    id: "travel",
+    title: "WorldTour",
+    description: "a react web app to track places you visited.",
+    thumbnail: "",
+    thumbnailGradient:
+      "bg-gradient-to-br from-cyan-300 via-sky-500 to-zinc-900",
+    technologies: ["React"],
+    category: "Web Development",
+    year: 2024,
+    duration: "02:30",
+    featured: true,
+    github: "https://github.com/BRGOKA/WorldTour",
+    demo: "https://brg-world-tour.netlify.app/",
+    problem:
+      "wanted an app to track places i visited, and experement with leaflet.",
+    solution:
+      "WorldTour a web app to track where you traveled with local storage even though it comes with my data as a bonus :D.",
+    technical: "React web app with leaflet for the map and localStorage.",
+    learned:
+      "How to work with Leaflet, LocalStorage, and how to host on netlify",
+  },
 ];
 
 export function getProjectById(id) {
