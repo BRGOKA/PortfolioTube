@@ -194,6 +194,25 @@ export const projects = [
       "A react web app that uses IMDB API to fetch movies data and ID then anther API is used to watch the movie via IFrame embedding though im facing a problemwith the IFrame it refuses to run on a sandbox attribute but removing it is a security hazard.",
     learned: "How to work with external APIs and iframes.",
   },
+  {
+    id: "dice",
+    title: "dice Game",
+    description: "Silly dice game i made with vanilla JS :D.",
+    thumbnail: "",
+    thumbnailGradient:
+      "bg-gradient-to-br from-cyan-700 via-indigo-700 to-zinc-900",
+    technologies: ["JS"],
+    category: "Web Development",
+    year: 2023,
+    duration: "00:20",
+    featured: false,
+    github: "https://github.com/BRGOKA/diceRoll",
+    demo: "https://brgoka.github.io/diceRoll/",
+    problem: "felt bored, and i just leaned JS.",
+    solution: "I made a Dice game for 2 players, funny thing im alone.",
+    technical: "Vanilla JS game, and just go gambling.",
+    learned: "Stastics i guess.",
+  },
 ];
 
 export function getProjectById(id) {
