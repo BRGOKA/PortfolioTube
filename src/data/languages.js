@@ -22,8 +22,9 @@ export const programmingLanguages = [
       "Used for backend services and APIs, particularly with ASP.NET Core in full-stack projects.",
     usedIn: ["Clinic Scheduling App", "Backend APIs"],
   },
+  // used really a long time ago i think im rusty with C++
   // {
-  //   name: "C / C++",
+  //   name: "C++",
   //   description:
   //     "Where I go for lower-level work, performance-sensitive code, and coursework that requires close control of memory.",
   //   usedIn: ["Coursework", "Performance-critical modules"],
@@ -39,7 +40,7 @@ export const programmingLanguages = [
 export const techCategories = [
   {
     name: "Frontend",
-    items: ["React", "HTML", "CSS", "Tailwind CSS"],
+    items: ["React", "JS", "HTML", "CSS", "Tailwind CSS"],
   },
   {
     name: "Backend",

@@ -50,7 +50,7 @@ export const futureProjects = [
     title: "Clinical Data Extraction Pipeline",
     status: "Paused",
     description:
-      "A pipeline for extracting structured fields from unstructured clinical notes, paused while I focus on the imaging platform.",
+      "A pipeline for extracting structured fields from unstructured clinical notes, paused for now.",
     technologies: ["NLP", "Python", "Healthcare"],
     expectedYear: 2026,
   },

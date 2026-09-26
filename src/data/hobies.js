@@ -1,4 +1,4 @@
-// Hobbies content for the Hobbies page. Add a new hobby by adding an
+// NOTES: Hobbies content for the Hobbies page. Add a new hobby by adding an
 // object here  no UI code needs to change.
 export const hobbies = [
   {

@@ -1,4 +1,4 @@
-// Central project data. Add a new project by adding an object here —
+// NOTES: Central project data. Add a new project by adding an object here —
 // no UI code needs to change.
 export const categories = [
   "All",
@@ -82,29 +82,28 @@ export const projects = [
     learned:
       "I learned how far transfer learning stretches a small dataset, and how much class imbalance can distort a model's real-world performance.",
   },
-  // {
-  //   id: "rag-lab-notebook",
-  //   title: "RAG Lab Notebook Assistant",
-  //   description:
-  //     "A retrieval-augmented assistant that answers questions from a personal collection of research notes and papers.",
-  //   thumbnail: "",
-  //   thumbnailGradient: "from-sky-500 via-blue-600 to-zinc-900",
-  //   technologies: ["Python", "Hugging Face", "React"],
-  //   category: "AI / ML",
-  //   year: 2026,
-  //   duration: "04:05",
-  //   featured: true,
-  //   github: "#",
-  //   demo: "#",
-  //   problem:
-  //     "Research notes and PDFs pile up faster than anyone can search through manually, especially during literature reviews.",
-  //   solution:
-  //     "A retrieval-augmented generation pipeline indexes notes and papers locally, then answers natural-language questions with citations back to the source document.",
-  //   technical:
-  //     "Documents are chunked and embedded locally, stored in a vector index, and retrieved at query time to ground a language model's answer; the React frontend renders inline citations.",
-  //   learned:
-  //     "Building this taught me how much retrieval quality not model size determines whether a RAG system actually feels reliable.",
-  // },
+  {
+    id: "Quran-RAG",
+    title: "A RAG system for Quran tafsir",
+    description:
+      "A retrieval-augmented assistant that answers questions from a predefined Quran tafsir (tfsir Ibn Kathir).",
+    thumbnail: "",
+    thumbnailGradient: "from-sky-500 via-blue-600 to-zinc-900",
+    technologies: ["Python", "Hugging Face", "Google Colab"],
+    category: "AI / ML",
+    year: 2026,
+    duration: "04:05",
+    featured: true,
+    github: "#",
+    demo: "#",
+    problem: "wanted to make an app for quran tafsir with RAG system.",
+    solution:
+      "A retrieval-augmented generation pipeline indexes Quran verses and tafsir locally, then answers natural-language questions with citations back to the source document.",
+    technical:
+      "verses are chunked and embedded locally, stored in a vector index, and retrieved at query time to ground a language model's answer; the React frontend wasnt implimented but will be.",
+    learned:
+      "Building this taught me how much retrieval quality not model size determines whether a RAG system actually feels reliable.",
+  },
   {
     id: "Python-Backdoor",
     title: "Python Backdoor script",
