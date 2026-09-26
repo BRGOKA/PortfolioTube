@@ -66,10 +66,9 @@ export default function ProjectPage() {
         <Section title="Solution">{project.solution}</Section>
         <Section title="Technical implementation">{project.technical}</Section>
         <Section title="What I learned">{project.learned}</Section>
-        <Section title="">GitHub Repo Link and demo link comming soon</Section>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          {/* {project.github && (
+          {project.github !== "#" && (
             <a
               href={project.github}
               target="_blank"
@@ -79,7 +78,7 @@ export default function ProjectPage() {
               <Github size={16} /> View code
             </a>
           )}
-          {project.demo && (
+          {project.demo !== "#" && (
             <a
               href={project.demo}
               target="_blank"
@@ -88,7 +87,7 @@ export default function ProjectPage() {
             >
               <ExternalLink size={16} /> Live demo
             </a>
-          )} */}
+          )}
         </div>
       </div>
     </PageContainer>

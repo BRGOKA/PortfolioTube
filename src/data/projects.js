@@ -24,7 +24,7 @@ export const projects = [
     category: "Medical AI",
     year: 2025,
     duration: "03:42",
-    featured: true,
+    featured: false,
     github: "#",
     demo: "#",
     problem:
@@ -172,6 +172,27 @@ export const projects = [
       "Data is queried from a SQL database, processed with Python, and rendered into a templated report document with charts generated automatically from the results.",
     learned:
       "A small amount of automation removed a recurring source of tedious errors this project made me appreciate boring, reliable tooling.",
+  },
+  {
+    id: "MV-Library",
+    title: "Movies",
+    description:
+      "React serverless project, build when i was learning react powered by IMDB api to fetch movies data, and another api to watch movies :D.",
+    thumbnail: "",
+    thumbnailGradient: "from-orange-500 via-red-600 to-zinc-900",
+    technologies: ["React", "APIs"],
+    category: "Web Development",
+    year: 2024,
+    duration: "02:20",
+    featured: true,
+    github: "https://github.com/BRGOKA/MV-Library",
+    demo: "https://brgoka.github.io/MV-Library/",
+    problem: "wanted to make my own movies library.",
+    solution:
+      "A react serverless web app to save movies and watch them via external APIs.",
+    technical:
+      "A react web app that uses IMDB API to fetch movies data and ID then anther API is used to watch the movie via IFrame embedding though im facing a problemwith the IFrame it refuses to run on a sandbox attribute but removing it is a security hazard.",
+    learned: "How to work with external APIs and iframes.",
   },
 ];
 
