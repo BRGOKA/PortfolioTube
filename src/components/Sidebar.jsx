@@ -7,6 +7,7 @@ import {
   ListTodo,
   X,
   Gamepad,
+  Download,
 } from "lucide-react";
 
 const navItems = [
@@ -16,6 +17,11 @@ const navItems = [
   { to: "/portfoliotube/history", label: "History", icon: History },
   { to: "/portfoliotube/build-later", label: "Build Later", icon: ListTodo },
   { to: "/portfoliotube/hobies", label: "Hobies", icon: Gamepad },
+  // {
+  //   to: "https://drive.google.com/file/d/1Xf3ox8r1AuIM99uPa4gYC-9b1t9MCXSS/view?usp=sharing",
+  //   label: "Download CV",
+  //   icon: Download,
+  // },
 ];
 
 function NavItems({ onNavigate }) {
@@ -49,7 +55,20 @@ export default function Sidebar({ mobileOpen, onClose }) {
     <>
       {/* Desktop sidebar */}
       <aside className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-56 shrink-0 border-r border-zinc-200 dark:border-zinc-800 md:block">
-        <NavItems />
+        <div className="h-full flex flex-col justify-between pb-3 ">
+          <NavItems />
+          <NavLink
+            className={
+              "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors text-zinc-600 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-900"
+            }
+            target="_blank"
+            to={
+              "https://drive.google.com/file/d/1Xf3ox8r1AuIM99uPa4gYC-9b1t9MCXSS/view?usp=sharing"
+            }
+          >
+            <Download /> Download CV
+          </NavLink>
+        </div>
       </aside>
 
       {/* Mobile drawer */}
