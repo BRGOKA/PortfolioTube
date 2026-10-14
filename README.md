@@ -59,4 +59,4 @@ src/
 - Routing follows the spec: `/`, `/languages`, `/about`, `/history`, `/build-later`,
   `/projects/:id`.
 - Update the placeholder GitHub/LinkedIn/email links with your links in `Header.jsx`, `Footer.jsx`, and `Home.jsx`.
-  (probably will set a dedicated variable for them in the data folder later;))
+  (probably will set a dedicated variable for them in the data folder later. ;) )
