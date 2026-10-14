@@ -6,7 +6,7 @@ export default function Languages() {
   return (
     <PageContainer
       title="Languages & Technologies"
-      description="What I use, organized by how I actually use it — not percentage bars."
+      description="What I use, organized by how I actually use it."
     >
       <section className="mb-10">
         <h2 className="mb-4 text-base font-semibold text-zinc-900 dark:text-white">
