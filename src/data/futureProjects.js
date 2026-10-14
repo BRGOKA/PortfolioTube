@@ -19,6 +19,15 @@ export const futureProjects = [
     expectedYear: 2027,
   },
   {
+    id: "mv-library",
+    title: "Restyling MV-Lib",
+    status: "In Progress",
+    description:
+      "MV-Liv was build when i was a rookie so i want to challenge myself to remake it as a better version and a proof of my progress.",
+    technologies: ["React", "APIs"],
+    expectedYear: 2026,
+  },
+  {
     id: "ecg-anomaly-detector",
     title: "Real-Time ECG Anomaly Detector",
     status: "Researching",
