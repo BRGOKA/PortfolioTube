@@ -57,7 +57,7 @@ export default function About() {
           cybersecurity.
         </p>
         <p className="mt-3 text-[15px] leading-relaxed text-zinc-700 dark:text-zinc-300">
-          I enjoy turning technical ideas into working systems — most of what
+          I enjoy turning technical ideas into working systems, most of what
           I build starts as a question I want to answer for myself, then
           becomes something worth sharing.
         </p>
