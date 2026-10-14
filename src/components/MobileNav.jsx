@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom";
 import { Home, Code2, UserRound, History, ListTodo } from "lucide-react";
 
 const navItems = [
-  { to: "/", label: "Home", icon: Home, end: true },
-  { to: "/languages", label: "Languages", icon: Code2 },
-  { to: "/about", label: "About", icon: UserRound },
-  { to: "/history", label: "History", icon: History },
-  { to: "/build-later", label: "Later", icon: ListTodo },
+  { to: "/portfoliotube", label: "Home", icon: Home, end: true },
+  { to: "/portfoliotube/languages", label: "Languages", icon: Code2 },
+  { to: "/portfoliotube/about", label: "About", icon: UserRound },
+  { to: "/portfoliotube/history", label: "History", icon: History },
+  { to: "/portfoliotube/build-later", label: "Later", icon: ListTodo },
 ];
 
 export default function MobileNav() {
@@ -23,9 +23,7 @@ export default function MobileNav() {
           className={({ isActive }) =>
             [
               "flex flex-1 flex-col items-center gap-1 py-2 text-[11px] font-medium",
-              isActive
-                ? "text-ember-500"
-                : "text-zinc-500 dark:text-zinc-400",
+              isActive ? "text-ember-500" : "text-zinc-500 dark:text-zinc-400",
             ].join(" ")
           }
         >
