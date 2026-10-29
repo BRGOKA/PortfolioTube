@@ -11,6 +11,7 @@ import BuildLater from "./pages/BuildLater.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import ScrollToTop from "./utlis/ScrollToTop.jsx";
 import Hobies from "./pages/Hobies.jsx";
+import CVMobileDownload from "./components/CVMobileDownload.jsx";
 
 export default function App() {
   const [search, setSearch] = useState("");
@@ -44,6 +45,7 @@ export default function App() {
           </Routes>
         </main>
       </div>
+      <CVMobileDownload />
       <MobileNav />
     </div>
   );
