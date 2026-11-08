@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }) {
@@ -9,19 +10,56 @@ export default function ProjectCard({ project }) {
     category,
     year,
     duration,
+    thumbnail,
+    images = [],
     thumbnailGradient,
   } = project;
+  const [isPreviewing, setIsPreviewing] = useState(false);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (!isPreviewing || images.length < 2) return undefined;
+
+    const intervalId = window.setInterval(() => {
+      setActiveImageIndex((currentIndex) => (currentIndex + 1) % images.length);
+    }, 1500);
+
+    return () => window.clearInterval(intervalId);
+  }, [images.length, isPreviewing]);
+
+  const previewImages =
+    images.length > 0 ? images : thumbnail ? [thumbnail] : [];
+  const handlePreviewEnd = () => {
+    setIsPreviewing(false);
+    setActiveImageIndex(0);
+  };
 
   return (
     <Link
       to={`/PortfolioTube/projects/${id}`}
       className="group hover:scale-105 transition-all duration-500 block rounded-lg focus-visible:outline-none"
       aria-label={`View project: ${title}`}
+      onMouseEnter={() => setIsPreviewing(true)}
+      onMouseLeave={handlePreviewEnd}
+      onFocus={() => setIsPreviewing(true)}
+      onBlur={handlePreviewEnd}
     >
       <div className="relative aspect-video overflow-hidden rounded-xl bg-zinc-200  shadow-card transition-shadow duration-200 group-hover:shadow-cardHover dark:bg-zinc-800">
         <div
           className={`absolute inset-0 bg-gradient-to-br ${thumbnailGradient} transition-transform duration-200 ease-out group-hover:scale-[1.05]`}
         />
+        {previewImages.map((image, index) => (
+          <img
+            key={image}
+            src={image}
+            alt=""
+            aria-hidden="true"
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+              index === activeImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         <div className="absolute inset-0 flex items-end p-4">
           <span className="text-lg font-bold leading-tight text-white drop-shadow-sm">
             {title}

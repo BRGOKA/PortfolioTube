@@ -1,5 +1,19 @@
 // NOTES: Central project data. Add a new project by adding an object here —
 // no UI code needs to change.
+const cineStreamImages = Object.entries(
+  import.meta.glob("../assets/images/projects/Cine-Stream/*.avif", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+)
+  .sort(([left], [right]) => {
+    if (left.includes("cineHome")) return -1;
+    if (right.includes("cineHome")) return 1;
+    return left.localeCompare(right);
+  })
+  .map(([, imageUrl]) => imageUrl);
+
 export const categories = [
   "All",
   "AI / ML",
@@ -79,14 +93,15 @@ export const projects = [
     title: "Cine-Stream",
     description:
       "an upgraded version of the MV-Library project with production ready features and CI/CD pipeline",
-    thumbnail: "",
+    thumbnail: cineStreamImages[0] ?? "",
+    images: cineStreamImages,
     thumbnailGradient: "from-red-500 via-red-900 to-zinc-900",
     technologies: ["React", "APIs"],
     category: "Web Development",
     year: 2026,
     duration: "06:20",
     featured: true,
-    github: "https://github.com/BRGOKA/MV-Library",
+    github: "https://github.com/BRGOKA/MVStream",
     demo: "https://brg-cine-stream.vercel.app/",
     problem: "wanted to make my own movies library.",
     solution:
