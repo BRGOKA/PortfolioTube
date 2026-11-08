@@ -11,12 +11,12 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { to: "/portfoliotube", label: "Home", icon: Home, end: true },
-  { to: "/portfoliotube/languages", label: "Languages", icon: Code2 },
-  { to: "/portfoliotube/about", label: "About", icon: UserRound },
-  { to: "/portfoliotube/history", label: "History", icon: History },
-  { to: "/portfoliotube/build-later", label: "Build Later", icon: ListTodo },
-  { to: "/portfoliotube/hobies", label: "Hobies", icon: Gamepad },
+  { to: "PortfolioTube/", label: "Projects", icon: Home, end: true },
+  { to: "PortfolioTube/languages", label: "Languages", icon: Code2 },
+  { to: "PortfolioTube/about", label: "About", icon: UserRound },
+  { to: "PortfolioTube/history", label: "History", icon: History },
+  { to: "PortfolioTube/build-later", label: "Build Later", icon: ListTodo },
+  { to: "PortfolioTube/hobies", label: "Hobies", icon: Gamepad },
   // {
   //   to: "https://drive.google.com/file/d/1Xf3ox8r1AuIM99uPa4gYC-9b1t9MCXSS/view?usp=sharing",
   //   label: "Download CV",

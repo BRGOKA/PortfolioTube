@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom";
 import { Home, Code2, UserRound, History, ListTodo } from "lucide-react";
 
 const navItems = [
-  { to: "/portfoliotube", label: "Home", icon: Home, end: true },
-  { to: "/portfoliotube/languages", label: "Languages", icon: Code2 },
-  { to: "/portfoliotube/about", label: "About", icon: UserRound },
-  { to: "/portfoliotube/history", label: "History", icon: History },
-  { to: "/portfoliotube/build-later", label: "Later", icon: ListTodo },
+  { to: "/PortfolioTube/", label: "Home", icon: Home, end: true },
+  { to: "/PortfolioTube//languages", label: "Languages", icon: Code2 },
+  { to: "/PortfolioTube//about", label: "About", icon: UserRound },
+  { to: "/PortfolioTube//history", label: "History", icon: History },
+  { to: "/PortfolioTube//build-later", label: "Later", icon: ListTodo },
 ];
 
 export default function MobileNav() {

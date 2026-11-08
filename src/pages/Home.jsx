@@ -45,7 +45,7 @@ export default function Home({ search }) {
         </div>
         <div className="flex-1">
           <h1 className="text-lg font-bold text-zinc-900 dark:text-white sm:text-xl">
-            BRG
+            Brahim Goudjal (BRG)
           </h1>
           <p className="mt-0.5 text-sm text-zinc-500 dark:text-zinc-400">
             Biomedical Engineering Student • AI Engineer • Developer
