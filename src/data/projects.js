@@ -1,18 +1,29 @@
 // NOTES: Central project data. Add a new project by adding an object here —
 // no UI code needs to change.
-const cineStreamImages = Object.entries(
-  import.meta.glob("../assets/images/projects/Cine-Stream/*.avif", {
+const projectImageAssets = import.meta.glob(
+  "../assets/images/projects/**/*.{avif,webp,png,jpg,jpeg}",
+  {
     eager: true,
     import: "default",
     query: "?url",
-  }),
-)
-  .sort(([left], [right]) => {
-    if (left.includes("cineHome")) return -1;
-    if (right.includes("cineHome")) return 1;
-    return left.localeCompare(right);
-  })
-  .map(([, imageUrl]) => imageUrl);
+  },
+);
+
+function getProjectImages(assetFolder = "") {
+  if (!assetFolder.trim()) return [];
+
+  const folderPath = `/projects/${assetFolder.replace(/^\/+|\/+$/g, "")}/`;
+
+  return Object.entries(projectImageAssets)
+    .filter(([path]) => path.includes(folderPath))
+    .sort(([left], [right]) => {
+      const leftIsCover = /(?:home|thumbnail|cover)/i.test(left);
+      const rightIsCover = /(?:home|thumbnail|cover)/i.test(right);
+      if (leftIsCover !== rightIsCover) return leftIsCover ? -1 : 1;
+      return left.localeCompare(right);
+    })
+    .map(([, imageUrl]) => imageUrl);
+}
 
 export const categories = [
   "All",
@@ -26,11 +37,12 @@ export const categories = [
   "Other",
 ];
 
-export const projects = [
+const projectData = [
   {
     id: "dice",
     title: "dice Game",
     description: "Silly dice game i made with vanilla JS :D.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient:
       "bg-gradient-to-br from-cyan-700 via-indigo-700 to-zinc-900",
@@ -50,6 +62,7 @@ export const projects = [
     id: "number-game",
     title: "Number Guessing game",
     description: "a fun game i made with vanilla JS.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient:
       "bg-gradient-to-br from-cyan-700 via-blue-700 to-zinc-900",
@@ -70,6 +83,7 @@ export const projects = [
     title: "Automated Lab Report Generator",
     description:
       "A script-driven tool that turns raw experiment data into formatted lab reports automatically.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient: "from-lime-500 via-green-600 to-zinc-900",
     technologies: ["Python", "SQL"],
@@ -93,8 +107,8 @@ export const projects = [
     title: "Cine-Stream",
     description:
       "an upgraded version of the MV-Library project with production ready features and CI/CD pipeline",
-    thumbnail: cineStreamImages[0] ?? "",
-    images: cineStreamImages,
+    assetFolder: "Cine-Stream",
+    thumbnail: "",
     thumbnailGradient: "from-red-500 via-red-900 to-zinc-900",
     technologies: ["React", "APIs"],
     category: "Web Development",
@@ -115,6 +129,7 @@ export const projects = [
     title: "Movies-Library",
     description:
       "React serverless project, build when i was learning react powered by IMDB api to fetch movies data, and another api to watch movies :D.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient: "from-orange-500 via-red-600 to-zinc-900",
     technologies: ["React", "APIs"],
@@ -137,6 +152,7 @@ export const projects = [
     title: "Atomic Blog",
     description:
       "a blog i made with mock data to learn react memoization and optimization technics.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient:
       "bg-gradient-to-br from-fuchsia-600 via-fuchsia-600 to-zinc-900",
@@ -159,6 +175,7 @@ export const projects = [
     id: "travel",
     title: "WorldTour",
     description: "a react web app to track places you visited.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient:
       "bg-gradient-to-br from-cyan-300 via-sky-500 to-zinc-900",
@@ -181,6 +198,7 @@ export const projects = [
     id: "quiz",
     title: "React Quiz",
     description: "a react web app to test your knowledge about React.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient:
       "bg-gradient-to-br from-lime-400 via-lime-800 to-zinc-900",
@@ -201,6 +219,7 @@ export const projects = [
     title: "Medical AI Imaging Platform",
     description:
       "A platform that analyzes medical scans and flags regions of interest for radiologists, built to cut review time without replacing clinical judgment.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient: "from-rose-500 via-red-600 to-zinc-900",
     technologies: ["Python", "TensorFlow", "React", "FastAPI"],
@@ -224,6 +243,7 @@ export const projects = [
     title: "Brain MRI Tumor Classifier",
     description:
       "A classifier that distinguishes tumor types from brain MRI slices, with a focus on interpretability.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient: "from-violet-500 via-fuchsia-600 to-zinc-900",
     technologies: ["Python", "PyTorch", "OpenCV"],
@@ -247,6 +267,7 @@ export const projects = [
     title: "Skin Disease Classifier",
     description:
       "An image classifier for common dermatological conditions, built as a learning exercise in transfer learning.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient: "from-amber-500 via-orange-600 to-zinc-900",
     technologies: ["Python", "TensorFlow", "Keras"],
@@ -270,6 +291,7 @@ export const projects = [
     title: "Python Backdoor script",
     description:
       "A lightweight python script to gain a persistent root shell to a compremized computer.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient: "from-emerald-500 via-teal-600 to-zinc-900",
     technologies: ["Python", "Linux"],
@@ -293,6 +315,7 @@ export const projects = [
     title: "A RAG system for Quran tafsir",
     description:
       "A retrieval-augmented assistant that answers questions from a predefined Quran tafsir (tfsir Ibn Kathir).",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient: "from-sky-500 via-blue-600 to-zinc-900",
     technologies: ["Python", "Hugging Face", "Google Colab"],
@@ -316,6 +339,7 @@ export const projects = [
     title: "Clinic Scheduling Web App",
     description:
       "A full-stack scheduling tool for a small clinic, handling bookings, reminders, and staff calendars.",
+    assetFolder: "",
     thumbnail: "",
     thumbnailGradient: "from-red-500 via-rose-600 to-zinc-900",
     technologies: ["React", "ASP.NET Core", "PostgreSQL"],
@@ -335,6 +359,15 @@ export const projects = [
       "This was my first project where the hardest problems were about people and process, not code the scheduling logic had to match how the clinic actually worked.",
   },
 ];
+
+export const projects = projectData.map((project) => {
+  const images = getProjectImages(project.assetFolder);
+  return {
+    ...project,
+    images,
+    thumbnail: images[0] ?? project.thumbnail,
+  };
+});
 
 export function getProjectById(id) {
   return projects.find((p) => p.id === id);
