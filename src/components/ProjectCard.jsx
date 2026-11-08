@@ -15,10 +15,10 @@ export default function ProjectCard({ project }) {
   return (
     <Link
       to={`/portfoliotube/projects/${id}`}
-      className="group hover:scale-105 transition ease-in-out block rounded-lg focus-visible:outline-none"
+      className="group hover:scale-105 transition-all duration-500 block rounded-lg focus-visible:outline-none"
       aria-label={`View project: ${title}`}
     >
-      <div className="relative aspect-video overflow-hidden rounded-xl bg-zinc-200 shadow-card transition-shadow duration-200 group-hover:shadow-cardHover dark:bg-zinc-800">
+      <div className="relative aspect-video overflow-hidden rounded-xl bg-zinc-200  shadow-card transition-shadow duration-200 group-hover:shadow-cardHover dark:bg-zinc-800">
         <div
           className={`absolute inset-0 bg-gradient-to-br ${thumbnailGradient} transition-transform duration-200 ease-out group-hover:scale-[1.05]`}
         />
